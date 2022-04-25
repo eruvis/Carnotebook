@@ -1,0 +1,98 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorControlActivated">@color/colorTextHint</item>
+        <item name="colorControlHighlight">@color/colorTextHint</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:background">@color/colorBackgroundToolbar</item>
+    </style>
+
+    <style name="StandardTextInputTheme">
+        <item name="android:layout_height">@dimen/wrap_content</item>
+        <item name="android:layout_width">@dimen/match_parent</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textColorHint">@color/colorTextHint</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="StandardEditTextTheme">
+        <item name="android:layout_height">@dimen/match_parent</item>
+        <item name="android:layout_width">@dimen/match_parent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:imeOptions">actionDone</item>
+    </style>
+
+    <style name="StandardEditTextTheme.CarView">
+        <item name="android:focusable">false</item>
+        <item name="android:clickable">false</item>
+    </style>
+    <style name="Widget" />
+
+    <style name="Widget.TextInputLayout">
+        <item name="android:layout_height">@dimen/wrap_content</item>
+        <item name="android:textColorHint">@color/colorTextHint</item>
+    </style>
+
+    <style name="Widget.TextInputLayoutTypeOne" parent="@style/Widget.TextInputLayout">
+        <item name="android:layout_width">@dimen/input_width</item>
+    </style>
+
+    <style name="Widget.TextInputLayoutTypeTwo" parent="@style/Widget.TextInputLayout">
+        <item name="android:layout_width">@dimen/match_parent</item>
+    </style>
+
+    <style name="Widget.EditText">
+        <item name="android:layout_height">@dimen/match_parent</item>
+        <item name="android:layout_width">@dimen/match_parent</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textColorHint">@color/colorTextHint</item>
+        <item name="android:textColorHighlight">@color/colorTextHighlight</item>
+        <item name="android:padding">@dimen/text_padding</item>
+        <item name="android:paddingTop">@dimen/text_padding_top</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+    </style>
+
+    <style name="Widget.EditTextTypeOne" parent="@style/Widget.EditText">
+        <item name="android:background">@drawable/custom_et_bg_type_one</item>
+    </style>
+
+    <style name="Widget.EditTextTypeTwo" parent="@style/Widget.EditText">
+        <item name="android:background">@drawable/custom_et_bg_type_two</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--
+    <style name="Spinner" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:backgroundTint">@android:colo`r/holo_red_dark</item>
+        <item name="android:textSize">18sp</item>
+    </style>-->
+
+</resources>

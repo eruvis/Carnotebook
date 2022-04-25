@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ExpenseAddActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar" />
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_bg_refueling_expense" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:background="#99000000"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:indeterminate="true"
+            android:visibility="invisible" />
+
+        <include layout="@layout/list_divider" />
+
+        <TextView
+            android:id="@+id/tv_type_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/expense_type_label"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <include layout="@layout/list_divider" />
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/StandardTextInputTheme"
+            android:layout_marginTop="10dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/input_date_time_et"
+                style="@style/StandardEditTextTheme"
+                android:drawableStart="@drawable/ic_calendar"
+                android:focusable="false"
+                android:hint="@string/expense_date_time_hint"
+                android:inputType="date" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_mileage"
+                style="@style/StandardTextInputTheme"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_mileage_et"
+                    style="@style/StandardEditTextTheme"
+                    android:drawableStart="@drawable/ic_mileage"
+                    android:hint="@string/expense_mileage_hint"
+                    android:inputType="number"
+                    android:maxLength="7" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_amount"
+                style="@style/StandardTextInputTheme"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_amount_et"
+                    style="@style/StandardEditTextTheme"
+                    android:digits="0123456789.,"
+                    android:drawableStart="@drawable/ic_amount"
+                    android:hint="@string/expense_amount_hint"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_volume_and_price_per"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_volume"
+                style="@style/StandardTextInputTheme"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_volume_et"
+                    style="@style/StandardEditTextTheme"
+                    android:digits="0123456789.,"
+                    android:drawableStart="@drawable/ic_volume"
+                    android:hint="@string/expense_volume_hint"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_price_per"
+                style="@style/StandardTextInputTheme"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_price_per_et"
+                    style="@style/StandardEditTextTheme"
+                    android:digits="0123456789.,"
+                    android:drawableStart="@drawable/ic_price"
+                    android:hint="@string/expense_price_per_hint"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_fuel_type"
+                style="@style/StandardTextInputTheme"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_fuel_type_et"
+                    style="@style/StandardEditTextTheme"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_canister"
+                    android:focusable="false"
+                    android:hint="@string/expense_fuel_type_hint" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_fuel_grade"
+                style="@style/StandardTextInputTheme"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_fuel_grade_et"
+                    style="@style/StandardEditTextTheme"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_canister"
+                    android:focusable="false"
+                    android:hint="@string/expense_fuel_grade_hint" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_event_note"
+            style="@style/StandardTextInputTheme">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/input_event_note_et"
+                style="@style/StandardEditTextTheme"
+                android:drawableStart="@drawable/ic_event_note"
+                android:hint="@string/expense_event_note_hint"
+                android:inputType="textCapSentences"
+                android:maxLength="100" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

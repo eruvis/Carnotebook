@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="-1dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_header"
+        android:tint="@color/colorBackgroundAddAuto" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:indeterminate="true"
+        android:visibility="invisible" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_car_photo"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:padding="5dp"
+        android:src="@drawable/img_default_photo"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="3dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/civ_car_photo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_car_brand"
+                style="@style/Widget.TextInputLayoutTypeTwo">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_car_brand_et"
+                    style="@style/Widget.EditTextTypeTwo"
+                    android:drawableStart="@drawable/ic_car"
+                    android:hint="@string/car_brand_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:maxLength="20" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_car_model"
+                style="@style/Widget.TextInputLayoutTypeTwo"
+                android:layout_marginTop="8dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_car_model_et"
+                    style="@style/Widget.EditTextTypeTwo"
+                    android:drawableStart="@drawable/ic_car"
+                    android:hint="@string/car_model_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:maxLength="20" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_car_year_issue"
+                style="@style/Widget.TextInputLayoutTypeTwo"
+                android:layout_marginTop="8dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/input_car_year_issue_sp"
+                    style="@style/Widget.EditTextTypeTwo"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:focusable="false"
+                    android:hint="@string/car_year_issue_hint"
+                    android:inputType="date" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_car_mileage"
+                style="@style/Widget.TextInputLayoutTypeTwo"
+                android:layout_marginTop="8dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_car_mileage_et"
+                    style="@style/Widget.EditTextTypeTwo"
+                    android:drawableStart="@drawable/ic_mileage"
+                    android:hint="@string/car_mileage_hint"
+                    android:inputType="number"
+                    android:maxLength="7" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_car_fuel_type"
+                style="@style/Widget.TextInputLayoutTypeTwo"
+                android:layout_marginTop="8dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/input_car_fuel_type_sp"
+                    style="@style/Widget.EditTextTypeTwo"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_fuel"
+                    android:focusable="false"
+                    android:hint="@string/car_fuel_type_hint"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

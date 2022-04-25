@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="5dp"
+    android:elevation="4dp"
+    android:foreground="?android:selectableItemBackground"
+    app:cardCornerRadius="4dp">
+
+    <ImageView
+        android:id="@+id/iv_item_expense_edge"
+        android:layout_width="8dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorNotSelected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:id="@+id/iv_item_expense_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/ic_wallet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_item_expense_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/expense_date_time_hint"
+            android:textColor="@color/colorTextItemExpense"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/iv_item_expense_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_item_expense_mileage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/expense_mileage_hint"
+            android:textColor="@color/colorTextItemExpense"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/iv_item_expense_icon"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_expense_date_time" />
+
+        <TextView
+            android:id="@+id/tv_item_expense_fuel_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/expense_fuel_grade_hint"
+            android:textColor="@color/colorTextItemExpense"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/iv_item_expense_icon"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_expense_mileage" />
+
+        <TextView
+            android:id="@+id/tv_item_expense_fuel_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/expense_fuel_type_hint"
+            android:textColor="@color/colorTextItemExpense"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/iv_item_expense_icon"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_expense_mileage" />
+
+        <TextView
+            android:id="@+id/tv_item_expense_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/expense_event_note_hint"
+            android:textColor="@color/colorTextItemExpense"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            android:maxLines="2"
+            app:layout_constraintStart_toEndOf="@+id/iv_item_expense_icon"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_expense_volume" />
+
+        <TextView
+            android:id="@+id/tv_item_expense_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/expense_type_label"
+            android:textColor="@color/colorTextItemExpense"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_item_expense_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/expense_amount_hint"
+            android:textColor="@color/colorTextItemExpense"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/tv_item_expense_type"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_expense_type" />
+
+        <TextView
+            android:id="@+id/tv_item_expense_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/expense_volume_hint"
+            android:textColor="@color/colorTextItemExpense"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/tv_item_expense_amount"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_expense_amount" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

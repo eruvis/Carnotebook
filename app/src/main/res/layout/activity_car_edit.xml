@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CarEditActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackgroundCarEdit"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="invisible" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_car_photo"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-4dp"
+            android:padding="5dp"
+            android:src="@drawable/img_default_photo"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="3dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <android.support.design.widget.TextInputLayout style="@style/StandardTextInputTheme">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_car_brand_et"
+                    style="@style/StandardEditTextTheme"
+                    android:drawableStart="@drawable/ic_car"
+                    android:hint="@string/car_brand_hint"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:maxLength="20" />
+            </android.support.design.widget.TextInputLayout>
+
+            <include layout="@layout/list_divider" />
+
+            <android.support.design.widget.TextInputLayout style="@style/StandardTextInputTheme">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_car_model_et"
+                    style="@style/StandardEditTextTheme"
+                    android:drawableStart="@drawable/ic_car"
+                    android:hint="@string/car_model_hint"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:maxLength="20" />
+            </android.support.design.widget.TextInputLayout>
+
+            <include layout="@layout/list_divider" />
+
+            <android.support.design.widget.TextInputLayout style="@style/StandardTextInputTheme">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_car_color_et"
+                    style="@style/StandardEditTextTheme"
+                    android:drawableStart="@drawable/ic_color"
+                    android:hint="@string/car_color_hint"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:maxLength="20" />
+            </android.support.design.widget.TextInputLayout>
+
+            <include layout="@layout/list_divider" />
+
+            <android.support.design.widget.TextInputLayout style="@style/StandardTextInputTheme">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_car_year_issue_sp"
+                    style="@style/StandardEditTextTheme"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:focusable="false"
+                    android:hint="@string/car_year_issue_hint"
+                    android:inputType="date" />
+            </android.support.design.widget.TextInputLayout>
+
+            <include layout="@layout/list_divider" />
+
+            <android.support.design.widget.TextInputLayout style="@style/StandardTextInputTheme">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_car_mileage_et"
+                    style="@style/StandardEditTextTheme"
+                    android:drawableStart="@drawable/ic_mileage"
+                    android:hint="@string/car_mileage_hint"
+                    android:inputType="number"
+                    android:maxLength="7" />
+            </android.support.design.widget.TextInputLayout>
+
+            <include layout="@layout/list_divider" />
+
+            <android.support.design.widget.TextInputLayout style="@style/StandardTextInputTheme">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_car_fuel_type_sp"
+                    style="@style/StandardEditTextTheme"
+                    android:drawableStart="@drawable/ic_fuel"
+                    android:focusable="false"
+                    android:hint="@string/car_fuel_type_hint" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <include layout="@layout/list_divider" />
+
+            <android.support.design.widget.TextInputLayout style="@style/StandardTextInputTheme">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_purchase_date_et"
+                    style="@style/StandardEditTextTheme"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:focusable="false"
+                    android:hint="@string/car_purchase_date_hint"
+                    android:inputType="date" />
+            </android.support.design.widget.TextInputLayout>
+
+            <include layout="@layout/list_divider" />
+
+            <android.support.design.widget.TextInputLayout style="@style/StandardTextInputTheme">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_car_number_et"
+                    style="@style/StandardEditTextTheme"
+                    android:drawableStart="@drawable/ic_car_number"
+                    android:hint="@string/car_number_hint"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="10" />
+            </android.support.design.widget.TextInputLayout>
+
+            <include layout="@layout/list_divider" />
+
+            <android.support.design.widget.TextInputLayout style="@style/StandardTextInputTheme">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_car_vin_et"
+                    style="@style/StandardEditTextTheme"
+                    android:drawableStart="@drawable/ic_vin"
+                    android:hint="@string/car_vin_hint"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="17" />
+            </android.support.design.widget.TextInputLayout>
+
+            <include layout="@layout/list_divider" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

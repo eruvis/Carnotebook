@@ -1,0 +1,132 @@
+
+User "1" *-- "*" Car
+User "1" *-- "*" Boat
+User "1" *-- "*" Motorcycle
+Car ..|> Serializable
+Car "1" *-- "*" Refueling
+Car "1" *- "*" Product
+Car "1" *-- "*" Expense
+Car "1" *-- "*" Service
+Car --|> Vehicle
+Boat --|> Vehicle
+Motorcycle -|> Vehicle
+
+Refueling --|> Expenses
+Expense --|> Expenses
+Product --|> Expenses
+Service -|> Expenses
+
+
+String idDoc
+Uri photo
+String brand
+String model
+String name
+String color
+Date yearIssue
+int mileage
+Date purchaseDate
+Date dateAdd
+
+
+String idDoc
+String type
+Date date
+int mileage
+String note
+Date dateAdd
+
+
+
+@startuml
+
+User "1" *-- "*" Car
+User "1" *-- "*" Boat
+User "1" *-- "*" Motorcycle
+
+Car ..|> Serializable
+Boat ..|> Serializable
+Motorcycle ..|> Serializable
+Car "1" *-- "*" Refueling
+Car "1" *-- "*" Product
+Car "1" *-- "*" Service
+Car --|> Vehicle
+Boat --|> Vehicle
+Motorcycle -|> Vehicle
+
+Refueling --|> Expense
+Product --|> Expense
+Service -|> Expense
+
+
+
+
+class Refueling{
+double volume
+double price
+String fuelType
+String fuelGrade
+getVolume()
+getPrice()
+getFuelType()
+getFuelGrade()
+}
+
+
+class User{
+String email
+String idDoc
+}
+
+interface Serializable{
+}
+
+interface Vehicle {
+getIdDoc()
+getPhotoUri()
+getBrand()
+getModel()
+getName()
+getColor()
+getYearIssue()
+getMileage()
+getPurchaseDate()
+getDateAdd()
+}
+
+class Boat {
+String length
+String height
+String width
+getLength()
+getHeight()
+getWidth()
+}
+
+class Motorcycle {
+String number
+String vin
+getVin()
+getNumber()
+}
+
+class Car {
+String number
+String fuelType
+String vin
+getVin()
+getNumber()
+getFuelType()
+}
+
+interface Expense {
+Expense()
+getIdDoc()
+getType()
+getDate()
+getAmount()
+getMileage()
+getNote()
+getDateAdd()
+}
+@enduml

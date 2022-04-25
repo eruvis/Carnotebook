@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorBackgroundToolbar"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginBottom="8dp">
+
+        <Spinner
+            android:id="@+id/sp_expense_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/expense_type_array"
+            android:layout_marginTop="4dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_expenses_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_tap_to_add_expenses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/tap_to_add_expense"
+        android:textColor="@color/colorBackgroundAddAuto"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_add_car_for_work"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/add_car_for_work"
+        android:textColor="@color/colorBackgroundAddAuto"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_total_expenses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorBackgroundToolbar"
+        android:padding="5dp"
+        android:textColor="@color/colorText"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom|end"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:src="@drawable/ic_add"
+        android:visibility="visible"
+        app:fab_colorNormal="@color/colorRed"
+        app:fab_hideAnimation="@anim/hide_to_bottom"
+        app:fab_showAnimation="@anim/show_from_bottom"
+        app:menu_backgroundColor="#ccffffff">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_add_other_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_wallet"
+            app:fab_colorNormal="@color/colorOther"
+            app:fab_colorPressed="@color/colorOther"
+            app:fab_label="@string/fab_other_label"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_add_spares_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/ic_parts"
+            app:fab_colorNormal="@color/colorSpares"
+            app:fab_colorPressed="@color/colorSpares"
+            app:fab_label="@string/fab_spares_label"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_add_fine_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fine"
+            app:fab_colorNormal="@color/colorFine"
+            app:fab_colorPressed="@color/colorFine"
+            app:fab_label="@string/fab_fine_label"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_add_parking_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_parking"
+            app:fab_colorNormal="@color/colorParking"
+            app:fab_colorPressed="@color/colorParking"
+            app:fab_label="@string/fab_parking_label"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_add_services_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_service"
+            app:fab_colorNormal="@color/colorService"
+            app:fab_colorPressed="@color/colorService"
+            app:fab_label="@string/fab_service_label"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_add_wash_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/ic_car_wash"
+            app:fab_colorNormal="@color/colorCarWash"
+            app:fab_colorPressed="@color/colorCarWash"
+            app:fab_label="@string/fab_wash_label"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_add_refueling_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fuel"
+            app:fab_colorNormal="@color/colorRefueling"
+            app:fab_colorPressed="@color/colorRefueling"
+            app:fab_label="@string/fab_refueling_label"
+            app:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+    <!--android:id="@+id/fab_add_car"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom|end"-->
+    <!--android:layout_margin="16dp"-->
+    <!--android:src="@drawable/ic_add_car"-->
+    <!--app:backgroundTint="#4CAF50"-->
+    <!--app:layout_anchor="@id/rv_expenses_list"-->
+    <!--app:layout_anchorGravity="center|bottom|right"-->
+    <!--app:layout_behavior="com.example.eruvis.carnotebook.ViewEffects.ScrollAwareFABBehavior"-->
+    <!--app:maxImageSize="40dp" />-->
+</android.support.constraint.ConstraintLayout>

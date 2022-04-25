@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorBackgroundToolbar"
+            android:indeterminateTintMode="src_atop"
+            android:visibility="invisible" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_cars_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:id="@+id/tv_tap_to_add_car"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/tap_to_add_car"
+            android:textColor="@color/colorBackgroundAddAuto"
+            android:visibility="gone"
+            app:layout_anchor="@id/rv_cars_list"
+            app:layout_anchorGravity="center" />
+
+        <TextView
+            android:id="@+id/tv_total_cars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorBackgroundToolbar"
+            android:padding="5dp"
+            android:textColor="@color/colorText"
+            android:textStyle="bold" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_add_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:fab_colorNormal="@color/colorGreen"
+            app:fab_colorPressed="@color/colorGreen"
+            android:src="@drawable/ic_add_car"
+            app:fab_showAnimation="@anim/show_from_bottom"
+            app:fab_hideAnimation="@anim/hide_to_bottom" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

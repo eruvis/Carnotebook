@@ -1,0 +1,224 @@
+<resources>
+    <string name="app_name">CarNotebook</string>
+
+    <string name="facebook_application_id">457803908092044</string>
+    <string name="facebook_login_protocol_scheme">fb457803908092044</string>
+
+    <!-- SIGN IN, SIGN OUT, RESET PASSWORD ACTIVITY -->
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Пароль</string>
+    <string name="confirm_password_hint">Повторите пароль</string>
+    <string name="password_forgot_label">Забыли пароль?</string>
+    <string name="reset_password_label">Восстановить пароль</string>
+    <string name="sign_in_label">Войти</string>
+    <string name="sign_in_or_label">Вход</string>
+    <string name="sign_in_without_registration_label">Войти без регистрации</string>
+    <string name="sign_up_or_label">Регистрация</string>
+    <string name="sign_up_label">Зарегистрироваться</string>
+    <!---->
+
+    <!-- Main activity -->
+    <string name="dialog_log_out">Вы уверены?</string>
+    <string name="settings">Настройки</string>
+    <string name="other">Другое</string>
+    <string name="about_application">О приложении</string>
+    <string name="sign_out">Выйти</string>
+    <!---->
+
+    <!-- ADD, EDIT CAR -->
+    <string name="car_brand_hint">Марка</string>
+    <string name="car_model_hint">Модель</string>
+    <string name="car_color_hint">Цвет автомобиля</string>
+    <string name="car_year_issue_hint">Год выпуска</string>
+    <string name="car_mileage_hint">Текущий пробег</string>
+    <string name="car_fuel_type_hint">Тип топлива</string>
+    <string-array name="fuel_type_array">
+        <item name="gasoline">Бензин</item>
+        <item name="diesel">Дизель</item>
+        <item name="gas">Газ</item>
+        <item name="gasoline_plus_gas">Бензин + Газ</item>
+    </string-array>
+    <string name="car_purchase_date_hint">Дата покупки</string>
+    <string name="car_number_hint">Номер автомобиля</string>
+    <string name="car_vin_hint">VIN</string>
+    <string name="car_date_add">Дата добавления</string>
+    <!---->
+
+    <!-- VALIDATE -->
+    <string name="er_network_error">Нет поключения к интернету!</string>
+    <string name="er_unknown_error">Неизвестаня ошибка!</string>
+    <string name="er_fill_field">Поле не заполнено</string>
+    <string name="er_no_user_record">Пользователь не существует!</string>
+    <string name="er_email_already_in_use">Данный e-mail уже зарегистрирован</string>
+    <string name="er_incorrect_email">Некорректный e-mail</string>
+    <string name="er_invalid_password">Неверный пароль!</string>
+    <string name="er_min_password_length">Пароль меньше 6 символов</string>
+    <string name="er_password_not_math">Пароли не совпадают</string>
+    <string name="suc_password_reset">Пароль успешно сброшен. Проверьте почту!</string>
+    <!---->
+
+    <!-- GENERAL -->
+    <string name="warning">Предупреждение</string>
+    <string name="cancel">Отмена</string>
+    <string name="ok">Ок</string>
+    <string name="edit">Редактировать</string>
+    <string name="delete">Удалить</string>
+    <string name="guest">Гость</string>
+    <string name="user_not_found">Пользователь не найден</string>
+    <!---->
+
+    <!-- PREFERENCE -->
+    <string name="pref_general_title">Общие</string>
+    <string name="pref_currency_unit_title">Валюта</string>
+    <string name="pref_fuel_units_title">Единицы измерения топлива</string>
+    <string name="pref_distance_units_title">Единицы измерения расстояния</string>
+    <string name="pref_save_last_refueling_expense_summary">Сохранять данные о последней заправке?</string>
+
+    <string name="pref_default_currency">RUB</string>
+    <string name="pref_default_fuel_units">LIT</string>
+    <string name="pref_default_distance_units">KM</string>
+
+    <string name="pref_last_refueling_data_title">Данные о последней заправке</string>
+    <string name="pref_last_refueling_data_summary">Если активно - подгружаются данные с последней заправки</string>
+    <string name="pref_last_refueling_fuel_type_title">Тип топлива</string>
+    <string name="pref_last_refueling_fuel_price_title">Цена</string>
+
+    <string-array name="currency_unit_array">
+        <item>RUB</item>
+        <item>USD</item>
+        <item>UAH</item>
+    </string-array>
+
+    <string-array name="currency_unit_values">
+        <item>RUB</item>
+        <item>USD</item>
+        <item>UAH</item>
+    </string-array>
+
+    <string-array name="fuel_units_array">
+        <item>LIT</item>
+        <item>GAL</item>
+    </string-array>
+
+    <string-array name="fuel_units_values">
+        <item>LIT</item>
+        <item>GAL</item>
+    </string-array>
+
+    <string-array name="distance_units_array">
+        <item>KM</item>
+        <item>MIL</item>
+    </string-array>
+
+    <string-array name="distance_units_values">
+        <item>KM</item>
+        <item>MIL</item>
+    </string-array>
+    <!---->
+
+    <string name="kilometers">км</string>
+    <string name="miles">миль</string>
+    <string name="liters_l">л</string>
+    <string name="liters">литр</string>
+    <string name="gallons_g">гал</string>
+    <string name="gallons">галлон</string>
+    <string name="rub">₽</string>
+    <string name="usd">$</string>
+    <string name="uah">₴</string>
+
+    <!-- ADD, EDIT, VIEW EXPENSE -->
+    <string name="expense_type_label">Тип расхода</string>
+    <string name="expense_date_time_hint">Дата и время</string>
+    <string name="expense_mileage_hint">Пробег</string>
+    <string name="expense_amount_hint">Сумма</string>
+    <string name="expense_fuel_grade_hint">Марка топлива</string>
+    <string name="expense_fuel_type_hint">Тип топлива</string>
+    <string-array name="gasoline_type_array">
+        <item name="ai_80">АИ-80</item>
+        <item name="ai_92">АИ-92</item>
+        <item name="ai_92+">АИ-92+</item>
+        <item name="ai_95">АИ-95</item>
+        <item name="ai_95+">АИ-95+</item>
+        <item name="ai_98">АИ-98</item>
+        <item name="ai_98+">АИ-98+</item>
+        <item name="ai_100">АИ-100</item>
+        <item name="ai_101">АИ-101</item>
+        <item name="ai_102">АИ-102</item>
+    </string-array>
+    <string-array name="diesel_type_array">
+        <item name="dt">ДТ</item>
+        <item name="dt+">ДТ+</item>
+    </string-array>
+    <string-array name="fuel_type_array_two">
+        <item name="gasoline">Бензин</item>
+        <item name="gas">Газ</item>
+    </string-array>
+    <string name="expense_volume_hint">Объем</string>
+    <string name="expense_price_per_hint">Цена за</string>
+    <string name="expense_event_note_hint">Примечание</string>
+    <string name="gasoline">Бензин</string>
+    <string name="diesel">Дизель</string>
+    <string name="gas">Газ</string>
+    <string name="gasoline_plus_gas">Бензин + Газ</string>
+    <string name="total_records">Всего записей</string>
+    <!---->
+
+    <string name="search">Поиск</string>
+
+    <string name="year_y">г</string>
+
+    <string name="delete_expense_confirmation">Данная запись будет удалена без возможности восстановления!</string>
+    <string name="delete_car_confirmation">Ваше авто и все связанные с ним расходы будут удалены!</string>
+    <string name="car_name">Имя машины</string>
+    <string name="car_year_issue">Год выпуска</string>
+    <string name="garage">Гараж</string>
+    <string name="tap_to_add_car">Нажмите "+" чтобы добавить авто</string>
+    <string name="total_car">Всего автомобилей</string>
+
+    <string name="tap_to_add_expense">Нажмите "+" чтобы добавить расход</string>
+    <string name="add_car_for_work">Для начала работы добавьте авто</string>
+    <string name="action_filter">Фильтр</string>
+    <string name="expenses_list_title">Расходы</string>
+    <string name="statistics_title">Статистика</string>
+    <string name="total_title">Итог</string>
+
+    <string name="car_no_select">Машина не выбрана</string>
+
+    <string-array name="expense_type_array">
+        <item name="all">Все</item>
+        <item name="refueling">Заправка</item>
+        <item name="wash">Мойка</item>
+        <item name="service">Сервис</item>
+        <item name="parking">Парковка</item>
+        <item name="fine">Штраф</item>
+        <item name="spares">Запчасти</item>
+        <item name="other">Прочее</item>
+    </string-array>
+
+
+    <string name="fab_refueling_label">Заправка</string>
+    <string name="fab_wash_label">Мойка</string>
+    <string name="fab_service_label">Сервис</string>
+    <string name="fab_parking_label">Парковка</string>
+    <string name="fab_fine_label">Штраф</string>
+    <string name="fab_spares_label">Запчасти</string>
+    <string name="fab_other_label">Прочее</string>
+
+    <string name="fab_insurance_label">Страховка</string>
+    <string name="fab_toll_roads_label">Платные дороги</string>
+    <string name="fab_taxes_label">Налоги</string>
+
+
+    <string name="currency_unit">Валюта</string>
+    <string name="mileage_unit">Единицы пробега</string>
+    <string name="fuel_unit">Учет топлива</string>
+    <string name="purchase_date">Дата покупки</string>
+    <string name="add_auto">Добавить автомобиль</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <PreferenceCategory
+        android:key="key_general"
+        android:layout="@layout/preference_category_summary"
+        android:title="@string/pref_general_title">
+
+        <ListPreference
+            android:defaultValue="@string/pref_default_currency"
+            android:entries="@array/currency_unit_array"
+            android:entryValues="@array/currency_unit_values"
+            android:key="key_currency_unit"
+            android:singleLine="true"
+            android:summary="@string/pref_default_currency"
+            android:title="@string/pref_currency_unit_title" />
+
+        <ListPreference
+            android:defaultValue="@string/pref_default_fuel_units"
+            android:entries="@array/fuel_units_array"
+            android:entryValues="@array/fuel_units_values"
+            android:key="key_fuel_units"
+            android:singleLine="true"
+            android:summary="@string/pref_default_fuel_units"
+            android:title="@string/pref_fuel_units_title" />
+
+        <ListPreference
+            android:defaultValue="@string/pref_default_distance_units"
+            android:entries="@array/distance_units_array"
+            android:entryValues="@array/distance_units_values"
+            android:key="key_distance_units"
+            android:singleLine="true"
+            android:summary="@string/pref_default_distance_units"
+            android:title="@string/pref_distance_units_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="key_refueling"
+        android:title="@string/pref_last_refueling_data_title"
+        android:summary="@string/pref_last_refueling_data_summary"
+        android:layout="@layout/preference_category_summary">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="key_last_refueling_fuel_type"
+            android:title="@string/pref_last_refueling_fuel_type_title" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="key_last_refueling_fuel_price"
+            android:title="@string/pref_last_refueling_fuel_price_title" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

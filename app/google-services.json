@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "390377120681",
+    "firebase_url": "https://carnotebook-e2299.firebaseio.com",
+    "project_id": "carnotebook-e2299",
+    "storage_bucket": "carnotebook-e2299.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390377120681:android:1be92de988bb2351",
+        "android_client_info": {
+          "package_name": "com.example.eruvis.carnotebook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390377120681-vgj7mmlkv5l7bpu2hfvbqrgmsjt2e7lv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.eruvis.carnotebook",
+            "certificate_hash": "a726bd375e8d1b656f30482f4114a82c0fc76e7e"
+          }
+        },
+        {
+          "client_id": "390377120681-gsvicm0b3tvp0htmp9212idrlvakcbia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnU3wAkRMeHOTsoKo01QgYNRRDS1rM5tI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "390377120681-gsvicm0b3tvp0htmp9212idrlvakcbia.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

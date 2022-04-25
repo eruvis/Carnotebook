@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorAccent">#212121</color>
+
+    <color name="colorRoundedLeft">#CC0a3901</color>
+    <color name="colorRoundedRight">#CC000000</color>
+
+    <color name="colorHeader">#40212121</color>
+    <color name="colorBackgroundToolbar">#212121</color>
+    <color name="colorBackgroundAddAuto">#7D000000</color>
+    <color name="colorBackgroundSignIn">#CC000000</color>
+    <color name="colorBackgroundCarEdit">#262626</color>
+    <color name="colorBackgroundCarView">#262626</color>
+
+    <color name="colorSelected">#388E3C</color>
+    <color name="colorNotSelected">#E6E6E6</color>
+
+    <color name="colorTextItemExpense">#8F8F8F</color>
+    <!--MATERIAL 700-->
+    <color name="colorRefueling">#388E3C</color>
+    <color name="colorCarWash">#1976D2</color>
+    <color name="colorService">#00796B</color>
+    <color name="colorParking">#616161</color>
+    <color name="colorFine">#d32f2f</color>
+    <color name="colorSpares">#F57C00</color>
+    <color name="colorOther">#AFB42B</color>
+    <!---->
+
+    <color name="ColorWhiteTrans">#b3fffcfc</color>
+    <color name="colorText">#fafafa</color>
+    <color name="colorTextHint">#ffffff</color>
+    <color name="colorTextHighlight">#fafafa</color>
+
+    <color name="colorRed">#D32F2F</color>
+    <color name="colorYellow">#FFA000</color>
+    <color name="colorGreen">#388E3C</color>
+
+</resources>
